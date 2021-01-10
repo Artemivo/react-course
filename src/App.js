@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
-import ProductList from './home-work-1/ProductList.js';
+import '../src/home-work-2/home-work-2-module.css'
+import Blog from './home-work-2/Blog.js';
+import 'semantic-ui-css/semantic.min.css';
 
 
 class App extends React.Component {
 
   render() {
     return (
-      <div className='app'>
-        <ProductList />
+      <div>
+        <Blog />
       </div>
     )
   }
