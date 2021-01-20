@@ -2,14 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Input } from "semantic-ui-react";
 import { Button } from "semantic-ui-react";
+import { useDocumentTitle } from './hooks/use-document-title.js'
 
 export function ChangeTitle() {
   const [name, setTitleName] = useState("");
-
-  function useDocumentTitle() {
-    let titleText = document.querySelector("title");
-    titleText.innerHTML = name;
-  }
   return (
     <div>
       <Input
@@ -19,7 +15,7 @@ export function ChangeTitle() {
         value={name}
         onChange={(e) => setTitleName(e.target.value)}
       />
-      <Button onClick={useDocumentTitle}>Change title page</Button>
+      <Button onClick={useDocumentTitle(name)}>Change title page</Button>
     </div>
   );
 }

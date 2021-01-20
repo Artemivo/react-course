@@ -1,25 +1,20 @@
 import { useState, useEffect } from "react";
 import { Button } from "semantic-ui-react";
 import { Input } from "semantic-ui-react";
+import { useLocalStorage } from './hooks/use-local-storage.js'
 
 export function LocalWork() {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const setUser = () => {
-    let user = { name: name, age: age };
-    localStorage.setItem("user", JSON.stringify(user));
-  };
 
-  const getUser = () => {
-    let data = localStorage.getItem("user");
-    data = JSON.parse(data);
-    console.log(data);
-  };
-  const clearInfo = () =>{
-      localStorage.clear();
-      setName('');
-      setAge('');
-  }
+  const [age, setAge] = useLocalStorage('age', '');
+  const [name, setName] = useLocalStorage('name', '');
+  let user = { name: name, age: age };
+
+
+
+  function getUser() {
+    console.log(user)
+  } 
+
 
   return (
     <div className = "local-work">
@@ -37,13 +32,11 @@ export function LocalWork() {
         value={age}
         onChange={(e) => setAge(e.target.value)}
       />
-      <Button.Group>
-        <Button onClick={setUser}>Set user</Button>
-        <Button.Or />
+
+
         <Button onClick={getUser}>Get user</Button>
-        <Button.Or />
-        <Button onClick={clearInfo}>Clear</Button>
-      </Button.Group>
+
+
     </div>
   );
 }
