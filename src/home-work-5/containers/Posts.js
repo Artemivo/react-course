@@ -1,6 +1,13 @@
 import React from "react";
 import useData from "../hooks/useData";
-import { Container, GridColumn, List, Grid, Header, Icon } from "semantic-ui-react";
+import {
+  Container,
+  GridColumn,
+  List,
+  Grid,
+  Header,
+  Icon,
+} from "semantic-ui-react";
 import {
   Link,
   Route,
@@ -17,9 +24,8 @@ export default function Posts() {
   const { path, url } = useRouteMatch();
   if (error && error.status === 404) {
     console.log(error);
-    return <Redirect to={`/posts`}/>
+    return <Redirect to={`/posts`} />;
   }
-
 
   return (
     <Container>
@@ -35,8 +41,8 @@ export default function Posts() {
                       name="address card outline"
                       size="large"
                       verticalAlign="middle"
-                    />{"Take user info  "}
-                    
+                    />
+                    {"Take user info  "}
                   </Link>
                   <List.Content>
                     <Link to={`/posts/${post.id}`}>
@@ -49,20 +55,17 @@ export default function Posts() {
             </List>
           </Grid.Column>
           <Grid.Column width={8}>
-          <Switch>
-            <Route exact path={path}>
-            <Header as='h2'>
-    <Icon name='settings' />
-    <Header.Content>
-      Select a post
-    </Header.Content>
-  </Header>
-              
-            </Route>
-            <Route path={`${path}/:postId`}>
-              <PostDetails />
-            </Route>
-          </Switch>
+            <Switch>
+              <Route exact path={path}>
+                <Header as="h2">
+                  <Icon name="settings" />
+                  <Header.Content>Select a post</Header.Content>
+                </Header>
+              </Route>
+              <Route path={`${path}/:postId`}>
+                <PostDetails />
+              </Route>
+            </Switch>
           </Grid.Column>
         </Grid>
       )}
