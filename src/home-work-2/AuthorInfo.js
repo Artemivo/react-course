@@ -58,12 +58,6 @@ class AuthorInfo extends Component {
           <Card.Content>
             <Card.Header>{author.name}</Card.Header>
             <Card.Meta>nick-name : <b>{author.username}</b></Card.Meta>
-            <Card.Meta>
-              <span>email : {author.email}</span>
-            </Card.Meta>
-            <Card.Meta>
-              <span>phone : {author.phone}</span>
-            </Card.Meta>
             <Card.Description>
               {author.address.city}, {author.address.street} {author.address.zipcode}
             </Card.Description>
@@ -75,7 +69,7 @@ class AuthorInfo extends Component {
             </a>
             {areAlbumsDisplayed && 
             <List>
-              {albums.map(album => <List.Item>{album.title}</List.Item> )}
+              {albums.map(album => <List.Item><a>{album.title}</a></List.Item> )}
             </List> }
           </Card.Content>
         </Card>
