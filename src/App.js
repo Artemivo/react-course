@@ -9,6 +9,8 @@ import {LocalWork} from './home-work-4/LocalWork.js';
 import {StatusUser} from './home-work-4/StatusUser.js';
 import {ChangeTitle} from './home-work-4/ChangeTitle.js';
 import BlogRout from './home-work-5/BlogRout.js'
+import MyShop from './home-work-6/MyShop'
+
 
 
 class App extends React.Component {
@@ -16,7 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <LocalWork />
+        <MyShop />
       </div>
     )
   }
