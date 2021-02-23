@@ -5,6 +5,7 @@ import "@glidejs/glide/dist/css/glide.theme.min.css";
 
 class Glide extends Component {
     constructor(props) {
+        // console.log(props)
         super(props);
         this.slider = React.createRef(); 
         this.glider = null;

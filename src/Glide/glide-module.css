@@ -1,0 +1,26 @@
+
+.add-img{
+    height: 150px;
+    width: 250px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 5px 16px 0px #0B325E, -50px 37px 47px 50px rgba(0,0,0,0); 
+     box-shadow: 2px 5px 16px 0px #0B325E, -50px 37px 47px 50px rgba(0,0,0,0); 
+}
+
+.glide{
+    background: radial-gradient(circle, rgba(235,238,174,1) 0%, rgba(235,176,240,0.8914916308320203) 100%);
+}
+
+form{
+    background: radial-gradient(circle, rgba(235,238,174,1) 0%, rgba(235,176,240,0.8914916308320203) 100%);
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
