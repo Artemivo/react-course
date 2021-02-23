@@ -12,16 +12,13 @@
 }
 
 span {
-  position: relative;
-  display: inline-block;
-  width: 10em;
+
+
   height: 2.5em;
   line-height: 2.5em;
-  vertical-align: middle;
-  text-align: center;
   text-decoration: none;
   text-shadow: 0 -1px 1px #777;
-  color: #fff;
+  color: rgb(59, 53, 53);
   outline: none;
 
   border-radius: 5px;
