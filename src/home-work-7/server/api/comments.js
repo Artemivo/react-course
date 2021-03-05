@@ -1,5 +1,7 @@
 const Router = require ('express').Router;
 const commentRouter = Router();
+import users from './db/users.json'
+
 
 
 let comments = [];
